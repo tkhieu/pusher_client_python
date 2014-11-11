@@ -50,8 +50,8 @@ class Pusher(object):
     def __init__(self, app_id=None, key=None, secret=None, host=None, port=None, encoder=None):
         _globals = globals()
         self.app_id = str(app_id or _globals['app_id'])
-        if not app_id_re.match(self.app_id):
-            raise NameError("Invalid app id")
+        # if not app_id_re.match(self.app_id):
+        #     raise NameError("Invalid app id")
         self.key = key or _globals['key']
         self.secret = secret or _globals['secret']
         self.host = host or _globals['host']
